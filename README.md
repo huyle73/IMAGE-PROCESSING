@@ -2,5 +2,6 @@ THIS RESPOSITORY CONTAINS IMAGE PROCESSING LESSON BY Dr. Do Thanh Ha at VNU- Han
 
  Each file consists of source code with exercises in slide.
 
+17072020
 
 
