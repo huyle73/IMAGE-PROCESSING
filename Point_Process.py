@@ -4,6 +4,7 @@
 Created on Mon May 25 11:18:49 2020
 
 @author: lehuy
+@supervisor : NguyenVanAnh
 """
 import cv2
 def increase_brightness(path = '/Users/lehuy/Desktop/01.jpeg') :
