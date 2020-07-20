@@ -41,7 +41,7 @@ def cdf(img, g, a):
         sum_ = len(img) * len(img[0])
         p = count /sum_
         a[g-1] = p
-§    return a[g-1], a
+    return a[g-1], a
     
     
   
