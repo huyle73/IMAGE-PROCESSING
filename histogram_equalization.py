@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jul 14 20:22:49 2020
-
-@author: lehuy
-"""
+    Created on Tue Jul 14 20:22:49 2020
+    @author: lehuy
+    @supervisor : Nguyen Van Anh
+    """
 import cv2
 import numpy as np
 #Lec03_Pointprocessing
 def histogram_equalization (img):
-    try:  
+    try:
         a = np.ones(256) * -1
         m_j = 32
         M_j = 200
-    
+        
         m_i = np.min(img)
         M_i = np.max(img)
         img1 = img
@@ -29,7 +29,7 @@ def histogram_equalization (img):
                 
                 p, a = cdf(img,g, a)
                 img1[i, j] = (M_j - m_j) * (p - p_mi) / (p_Mi - p_mi) + m_j
-
+    
         print('done')
     except:
         print(p)
@@ -42,11 +42,11 @@ def cdf(img, g, a):
         p = count /sum_
         a[g-1] = p
     return a[g-1], a
-    
-    
-  
 
-path = "/Users/lehuy/Desktop/02.jpg"
+
+
+
+path = "/Users/lehuy/Desktop/01.jpeg"
 img = np.asarray(cv2.imread(path))
 print(img.shape)
 img_c1 = img[:,:,0]
@@ -72,6 +72,3 @@ cv2.imshow("after",j_com/255.0)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
-    
-    
